@@ -1,14 +1,11 @@
 {
   "name": "cplaitano/cp_suppliershippingtime",
   "version": "1.0.0",
-  "license": "MARSAL 3.0",
+  "license": "AFL-3.0",
   "authors": [
     {
       "name": "Carmine Plaitano",
       "email": "c.plaitano@gmail.com"
-    },
-    {
-      "name": "MarSal Dev"
     }
   ],
   "autoload": {
