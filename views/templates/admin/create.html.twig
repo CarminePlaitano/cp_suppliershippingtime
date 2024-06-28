@@ -1,0 +1,43 @@
+{% extends '@!PrestaShop/Admin/layout.html.twig' %}
+
+{% block content %}
+	<div class="row justify-content-center">
+    <div class="col">
+
+    {% block supplier_shipping_time_form %}
+      {{ form_start(supplierShippingTimeForm) }}
+      <div class="card">
+        <h3 class="card-header">
+        <i class="material-icons">edit</i>
+        {{ 'Fascia di tempo'|trans({}, 'Modules.Cp_SupplierShippingTime.Admin') }}
+        </h3>
+        <div class="card-block">
+          <div class="form-wrapper card-text">
+            {{ form_errors(supplierShippingTimeForm) }}
+
+            {% block push_form_rest %}
+              {{ form_rest(supplierShippingTimeForm) }}
+            {% endblock %}
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="{{ path('cp_suppliershippingtime_controller_configure') }}" class="btn btn-outline-secondary">
+            {{ 'Annulla'|trans({}, 'Admin.Actions') }}
+          </a>
+          <button class="btn btn-primary float-right">
+            {{ 'Salva'|trans({}, 'Admin.Actions') }}
+          </button>
+        </div>
+      </div>
+      {{ form_end(supplierShippingTimeForm) }}
+    {% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+
+	<script src="{{ asset('../modules/cp_suppliershippingtime/views/assets/js/form.bundle.js') }}"></script>
+	<script src="{{ asset('themes/default/js/bundle/pagination.js') }}"></script>
+{% endblock %}

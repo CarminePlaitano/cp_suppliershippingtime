@@ -1,0 +1,55 @@
+cp_suppliershippingtime_controller_configure:
+  path: /configure-suppliertime
+  methods: [GET]
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::indexAction'
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+
+cp_suppliershippingtime_controller_search:
+  path: /configure-suppliertime
+  methods: [POST]
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::searchAction'
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+
+cp_suppliershippingtime_controller_create:
+  path: /create-suppliertime
+  methods: [GET, POST]
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::createAction'
+    _disable_module_prefix: true
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+
+cp_suppliershippingtime_controller_edit:
+  path: /configure-suppliertime/{idSupplierShippingTime}/edit
+  methods: [GET, POST]
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::editAction'
+    _disable_module_prefix: true
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+  requirements:
+    idSupplierShippingTime: \d+
+
+cp_suppliershippingtime_controller_bulk_delete:
+  path: /configure-suppliertime/bulk-delete
+  methods: POST
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::deleteBulkAction'
+    _disable_module_prefix: true
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+
+cp_suppliershippingtime_controller_delete:
+  path: /configure-suppliertime/{idSupplierShippingTime}/delete
+  methods: POST
+  defaults:
+    _controller: 'Module\Cp_SupplierShippingTime\Controller\Admin\ConfigureController::deleteAction'
+    _disable_module_prefix: true
+    _legacy_controller: "AdminCpSupplierShippingTime"
+    _legacy_link: "AdminCpSupplierShippingTime"
+  requirements:
+    idSupplierShippingTime: \d+
